@@ -1,0 +1,349 @@
+<ScrollView 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+	>
+	
+	<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+	android:padding="10dp"
+    tools:context=".MainActivity"
+    >
+    
+    <TextView
+        android:id="@+id/newRegTitleLabel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="물품 등록정보 수정"
+        android:textStyle="bold|italic"
+        android:textSize="20dp"
+        android:layout_alignParentTop="true"
+        android:gravity="right"
+        />
+    
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_below="@+id/newRegTitleLabel"
+        android:background="#ffff0000"
+        />
+        
+
+    <RelativeLayout
+        android:id="@+id/serialNumber"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/newRegTitleLabel"
+        android:layout_alignLeft="@+id/newRegTitleLabel"
+        android:layout_marginTop="18dp"
+        >
+        
+      	<TextView
+      	     android:id="@+id/serialNumberLabel"
+      	     android:layout_width="wrap_content"
+      	     android:layout_height="wrap_content"
+      	     android:layout_alignParentLeft="true"
+      	     android:paddingTop="4dp"
+           	 android:text="자산 번호"
+           	 android:textSize="14dp"
+           	 />
+      	 
+        <EditText
+           	android:id="@+id/serialNumberEntry"
+           	android:layout_width="match_parent"
+           	android:layout_height="wrap_content"
+           	android:layout_below="@+id/serialNumberLabel"
+           	android:layout_alignParentLeft="true"
+           	android:textSize="12dp"
+           	android:inputType="number"
+           	android:hint="자산번호를 입력하세요."
+           	/>
+         
+    	</RelativeLayout>
+    
+    <RelativeLayout
+        android:id="@+id/name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/serialNumber"
+        android:layout_alignLeft="@+id/serialNumber"
+        android:layout_marginTop="10dp"
+        >
+        
+      	<TextView
+      	    android:id="@+id/nameLabel"
+      	    android:layout_width="wrap_content"
+      	    android:layout_height="wrap_content"
+      	    android:layout_alignParentLeft="true"
+      	    android:paddingTop="4dp"
+           	android:text="물품명"
+           	android:textSize="14dp"
+            />
+      	 
+        <EditText
+           	android:id="@+id/nameEntry"
+           	android:layout_width="match_parent"
+           	android:layout_height="wrap_content"
+           	android:layout_below="@+id/nameLabel"
+           	android:layout_alignParentLeft="true"
+           	android:textSize="12dp"
+           	android:inputType="textCapWords"
+           	android:hint="물품명을 입력하세요."
+           	/>
+         
+        </RelativeLayout>
+        
+    <RelativeLayout
+        android:id="@+id/nfcId"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/name"
+        android:layout_alignLeft="@+id/name"
+        android:layout_marginTop="10dp"
+        >
+        
+      	<TextView
+      	    android:id="@+id/nfcIdLabel"
+      	    android:layout_width="wrap_content"
+      	    android:layout_height="wrap_content"
+      	    android:layout_alignParentLeft="true"
+      	    android:paddingTop="4dp"
+           	android:text="NFC ID"
+           	android:textSize="14dp"
+            />
+      	
+      	<Button
+           	android:id="@+id/nfcRegBtn"
+           	android:layout_width="wrap_content"
+           	android:layout_height="wrap_content"
+           	android:layout_below="@+id/nfcIdLabel"
+           	android:layout_alignParentRight="true"
+           	android:textSize="12dp"
+           	android:text="NFC 등록"
+           	/>
+      	
+      	<TextView
+      	    android:id="@+id/nfcIdView"
+      	    android:layout_width="wrap_content"
+      	    android:layout_height="wrap_content"
+      	    android:layout_toLeftOf="@+id/nfcRegBtn"
+      	    android:background="#ff000000"
+      	    android:layout_alignBaseline="@+id/nfcRegBtn"
+      	    android:padding="4dp"
+      	    android:text="아직 NFC ID가 등록되지 않았습니다."
+      	    android:textSize="12dp"
+      	    android:textColor="#ffffffff"
+      	    />
+         
+        </RelativeLayout>
+        
+    <RelativeLayout
+        android:id="@+id/purchaseDate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/nfcId"
+        android:layout_alignLeft="@+id/nfcId"
+        android:layout_marginTop="10dp"
+        >
+        
+      	<TextView
+      	    android:id="@+id/purchaseDateLabel"
+      	    android:layout_width="wrap_content"
+      	    android:layout_height="wrap_content"
+      	    android:layout_alignParentLeft="true"
+      	    android:paddingTop="4dp"
+           	android:text="구입 시기"
+           	android:textSize="14dp"
+            />
+      	 
+        <EditText
+           	android:id="@+id/purchaseDateEntry"
+           	android:layout_width="match_parent"
+           	android:layout_height="wrap_content"
+           	android:layout_below="@+id/purchaseDateLabel"
+           	android:layout_alignParentLeft="true"
+           	android:textSize="12dp"
+           	android:inputType="date"
+           	android:hint="구입 시기를 입력하세요."
+           	/>
+         
+        </RelativeLayout>    
+        
+    <RelativeLayout
+        android:id="@+id/price"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/purchaseDate"
+        android:layout_alignLeft="@+id/purchaseDate"
+        android:layout_marginTop="10dp"
+        >
+        
+      	<TextView
+      	    android:id="@+id/priceLabel"
+      	    android:layout_width="wrap_content"
+      	    android:layout_height="wrap_content"
+      	    android:layout_alignParentLeft="true"
+      	    android:paddingTop="4dp"
+           	android:text="가격"
+           	android:textSize="14dp"
+            />
+      	 
+        <EditText
+           	android:id="@+id/priceEntry"
+           	android:layout_width="match_parent"
+           	android:layout_height="wrap_content"
+           	android:layout_below="@+id/priceLabel"
+           	android:layout_alignParentLeft="true"
+           	android:textSize="12dp"
+           	android:inputType="number"
+           	android:hint="가격을 입력하세요."
+           	/>
+         
+        </RelativeLayout>      
+        
+    <RelativeLayout
+        android:id="@+id/manager"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/price"
+        android:layout_alignLeft="@+id/price"
+        android:layout_marginTop="10dp"
+        >
+        
+      	<TextView
+      	    android:id="@+id/managerLabel"
+      	    android:layout_width="wrap_content"
+      	    android:layout_height="wrap_content"
+      	    android:layout_alignParentLeft="true"
+      	    android:paddingTop="4dp"
+           	android:text="담당자"
+           	android:textSize="14dp"
+            />
+      	 
+        <TextView
+           	android:id="@+id/mainManagerLabel"
+           	android:layout_width="wrap_content"
+           	android:layout_height="wrap_content"
+           	android:layout_below="@+id/managerLabel"
+           	android:layout_alignParentLeft="true"
+           	android:layout_marginTop="4dp"
+           	android:layout_marginLeft="16dp"
+           	android:textSize="12dp"
+           	android:text="정 :"
+           	/>
+        
+        <EditText
+           	android:id="@+id/mainManagerEntry"
+           	android:layout_width="fill_parent"
+           	android:layout_height="wrap_content"
+           	android:layout_toRightOf="@+id/mainManagerLabel"
+           	android:layout_alignBaseline="@+id/mainManagerLabel"
+           	android:textSize="12dp"
+           	android:inputType="textCapWords"
+           	android:hint="담당자를 입력하세요."
+           	/>
+        
+        <TextView
+           	android:id="@+id/viceManagerLabel"
+           	android:layout_width="wrap_content"
+           	android:layout_height="wrap_content"
+           	android:layout_below="@+id/mainManagerLabel"
+           	android:layout_alignParentLeft="true"
+           	android:layout_marginTop="12dp"
+           	android:layout_marginLeft="16dp"
+           	android:textSize="12dp"
+           	android:text="부 :"
+           	/>
+        
+        <EditText
+           	android:id="@+id/viceManagerEntry"
+           	android:layout_width="fill_parent"
+           	android:layout_height="wrap_content"
+           	android:layout_toRightOf="@+id/viceManagerLabel"
+           	android:layout_alignBaseline="@+id/viceManagerLabel"
+           	android:textSize="12dp"
+           	android:inputType="textCapWords"
+           	android:hint="부담당자를 입력하세요."
+           	/>
+         
+        </RelativeLayout>      
+        
+    <RelativeLayout
+        android:id="@+id/department"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/manager"
+        android:layout_alignLeft="@+id/manager"
+        android:layout_marginTop="10dp"
+        >
+        
+      	<TextView
+      	    android:id="@+id/departmentLabel"
+      	    android:layout_width="wrap_content"
+      	    android:layout_height="wrap_content"
+      	    android:layout_alignParentLeft="true"
+      	    android:paddingTop="4dp"
+           	android:text="담당 부서"
+           	android:textSize="14dp"
+            />
+      	 
+        <EditText
+           	android:id="@+id/departmentEntry"
+           	android:layout_width="match_parent"
+           	android:layout_height="wrap_content"
+           	android:layout_below="@+id/departmentLabel"
+           	android:layout_alignParentLeft="true"
+           	android:textSize="12dp"
+           	android:inputType="number"
+           	android:hint="담당 부서를 입력하세요."
+           	/>
+         
+        </RelativeLayout>      
+        
+    <RelativeLayout
+        android:id="@+id/category"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/department"
+        android:layout_alignLeft="@+id/department"
+        android:layout_marginTop="10dp"
+        >
+        
+      	<TextView
+      	    android:id="@+id/categoryLabel"
+      	    android:layout_width="wrap_content"
+      	    android:layout_height="wrap_content"
+      	    android:layout_alignParentLeft="true"
+      	    android:paddingTop="4dp"
+           	android:text="분류"
+           	android:textSize="14dp"
+            />
+      	 
+        <EditText
+           	android:id="@+id/categoryEntry"
+           	android:layout_width="match_parent"
+           	android:layout_height="wrap_content"
+           	android:layout_below="@+id/categoryLabel"
+           	android:layout_alignParentLeft="true"
+           	android:textSize="12dp"
+           	android:inputType="textCapWords"
+           	android:hint="분류를 입력하세요."
+           	/>
+         
+        </RelativeLayout>      
+        
+        
+        <Button
+            android:id="@+id/newRegOkButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/category"
+            android:text="완료"
+            android:textSize="18dp"
+            />
+   
+</RelativeLayout>
+</ScrollView>

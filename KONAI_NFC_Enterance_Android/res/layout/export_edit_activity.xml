@@ -1,0 +1,264 @@
+<ScrollView 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+	>
+	
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+	android:padding="10dp"
+    tools:context=".MainActivity"
+    >
+    
+    <TextView
+        android:id="@+id/exportTitleLabel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="반출 신청서 수정/취소"
+        android:textStyle="bold|italic"
+        android:textSize="20dp"
+        android:layout_alignParentTop="true"
+        android:gravity="right"
+        />
+    
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_below="@+id/exportTitleLabel"
+        android:background="#ffff0000"
+        />
+        
+
+    <RelativeLayout
+        android:id="@+id/exportFrom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/exportTitleLabel"
+        android:layout_alignLeft="@+id/exportTitleLabel"
+        android:layout_marginTop="18dp"
+        >
+        
+      	<TextView
+      	     android:id="@+id/exportFromLabel"
+      	     android:layout_width="wrap_content"
+      	     android:layout_height="wrap_content"
+      	     android:layout_alignParentLeft="true"
+      	     android:paddingTop="4dp"
+           	 android:text="반출처"
+           	 android:textSize="14dp"
+           	 />
+      	 
+        <EditText
+           	android:id="@+id/exportFromEntry"
+           	android:layout_width="match_parent"
+           	android:layout_height="wrap_content"
+           	android:layout_below="@+id/exportFromLabel"
+           	android:layout_alignParentLeft="true"
+           	android:textSize="12dp"
+           	android:inputType="textCapWords"
+           	android:hint="반출처를 입력하세요."
+           	/>
+         
+    	</RelativeLayout>
+    
+    <RelativeLayout
+        android:id="@+id/importDate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/exportFrom"
+        android:layout_alignLeft="@+id/exportFrom"
+        android:layout_marginTop="10dp"
+        >
+        
+      	<TextView
+      	    android:id="@+id/importDateLabel"
+      	    android:layout_width="wrap_content"
+      	    android:layout_height="wrap_content"
+      	    android:layout_alignParentLeft="true"
+      	    android:paddingTop="4dp"
+           	android:text="반입 예정일"
+           	android:textSize="14dp"
+            />
+      	 
+        <EditText
+           	android:id="@+id/importDateEntry"
+           	android:layout_width="match_parent"
+           	android:layout_height="wrap_content"
+           	android:layout_below="@+id/importDateLabel"
+           	android:layout_alignParentLeft="true"
+           	android:textSize="12dp"
+           	android:inputType="date"
+           	android:hint="반입 예정일을 입력하세요."
+           	/>
+         
+        </RelativeLayout>
+        
+    <RelativeLayout
+        android:id="@+id/exitRadio"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/importDate"
+        android:layout_alignLeft="@+id/importDate"
+        android:layout_marginTop="10dp"
+        >
+        
+      	<TextView
+      	    android:id="@+id/exitRadioLabel"
+      	    android:layout_width="wrap_content"
+      	    android:layout_height="wrap_content"
+      	    android:layout_alignParentLeft="true"
+      	    android:paddingTop="4dp"
+           	android:text="비상문 사용"
+           	android:textSize="14dp"
+            />
+      	
+      	<RadioGroup
+      	    android:id="@+id/exitRadioGroup"
+      	    android:layout_width="wrap_content"
+      	    android:layout_height="wrap_content"
+      	    android:layout_below="@+id/exitRadioLabel"
+      	    android:orientation="horizontal"
+      	    android:layout_alignParentLeft="true"
+      	    android:paddingLeft="5dp"
+      	    android:paddingRight="5dp"
+      	    >
+      	    
+      	    <RadioButton
+      	        android:id="@+id/exitRadio01"
+      	        android:layout_width="wrap_content"
+      	        android:layout_height="wrap_content"
+      	        android:text="정문"
+      	        android:textSize="12dp"
+      	        />
+      	    
+      	    <RadioButton
+      	        android:id="@+id/exitRadio02"
+      	        android:layout_width="wrap_content"
+      	        android:layout_height="wrap_content"
+      	        android:text="비상문"
+      	        android:textSize="12dp"
+      	        />
+
+      		</RadioGroup>
+        </RelativeLayout>  
+        
+	<RelativeLayout
+        android:id="@+id/whoseRadio"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/exitRadio"
+        android:layout_alignLeft="@+id/exitRadio"
+        android:layout_marginTop="10dp"
+        >
+        
+      	<TextView
+      	    android:id="@+id/whoseRadioLabel"
+      	    android:layout_width="wrap_content"
+      	    android:layout_height="wrap_content"
+      	    android:layout_alignParentLeft="true"
+      	    android:paddingTop="4dp"
+           	android:text="구분"
+           	android:textSize="14dp"
+            />
+      	
+      	<RadioGroup
+      	    android:id="@+id/whoseRadioGroup"
+      	    android:layout_width="wrap_content"
+      	    android:layout_height="wrap_content"
+      	    android:layout_below="@+id/whoseRadioLabel"
+      	    android:layout_alignParentLeft="true"
+      	    android:orientation="horizontal"
+      	    android:paddingLeft="5dp"
+      	    android:paddingRight="5dp"
+      	    >
+      	    
+      	    <RadioButton
+      	        android:id="@+id/whoseRadio01"
+      	        android:layout_width="wrap_content"
+      	        android:layout_height="wrap_content"
+      	        android:text="회사물품"
+      	        android:textSize="12dp"
+      	        />
+      	    
+      	    <RadioButton
+      	        android:id="@+id/whoseRadio02"
+      	        android:layout_width="wrap_content"
+      	        android:layout_height="wrap_content"
+      	        android:text="외부개인 물품"
+      	        android:textSize="12dp"
+      	        />
+      	    
+      	    <RadioButton
+      	        android:id="@+id/whoseRadio03"
+      	        android:layout_width="wrap_content"
+      	        android:layout_height="wrap_content"
+      	        android:text="기타"
+      	        android:textSize="12dp"
+      	        />
+      		</RadioGroup>
+        </RelativeLayout>
+        
+    <RelativeLayout
+        android:id="@+id/exportReason"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/whoseRadio"
+        android:layout_alignLeft="@+id/whoseRadio"
+        android:layout_marginTop="10dp"
+        >
+        
+      	<TextView
+      	    android:id="@+id/exportReasonLabel"
+      	    android:layout_width="wrap_content"
+      	    android:layout_height="wrap_content"
+      	    android:layout_alignParentLeft="true"
+      	    android:paddingTop="4dp"
+           	android:text="사유"
+           	android:textSize="14dp"
+            />
+      	 
+        <EditText
+           	android:id="@+id/exportReasonEntry"
+           	android:layout_width="match_parent"
+           	android:layout_height="150dp"
+           	android:layout_below="@+id/exportReasonLabel"
+           	android:layout_alignParentLeft="true"
+           	android:lines="8"           	
+           	android:textSize="12dp"
+           	android:inputType="textCapWords"
+           	android:hint="반출사유를 입력하세요."
+           	android:gravity="top"
+           	/>
+         
+        </RelativeLayout>
+        
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/exportReason"
+            >
+        
+       		<Button
+            	android:id="@+id/exportOkButton"
+            	android:layout_width="wrap_content"
+            	android:layout_height="wrap_content"
+            	android:text="수정 완료"
+            	android:textSize="18dp"
+            	android:layout_weight="1"
+            	/>
+       		<Button
+            	android:id="@+id/exportDelButton"
+            	android:layout_width="wrap_content"
+            	android:layout_height="wrap_content"
+            	android:text="반출 취소"
+            	android:textSize="18dp"
+            	android:layout_weight="1"
+            	/>
+       	</LinearLayout>	
+   
+</RelativeLayout>
+</ScrollView>

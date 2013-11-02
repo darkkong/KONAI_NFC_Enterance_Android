@@ -1,0 +1,61 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp"
+    tools:context=".MainActivity"
+    >
+    
+    <Button
+        android:id="@+id/nfcRead"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"
+        android:background="#ffffffff"
+        android:text="NFC 칩을 태그해 주세요."
+        android:textStyle="bold"
+        android:textSize="24dp"
+        />
+    
+    <EditText
+        android:id="@+id/serialNumberEntry"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_toLeftOf="@+id/okBtn"
+        android:layout_alignParentBottom="true"
+        android:hint="자산번호를 입력하세요."
+        />
+    
+    <Button
+        android:id="@+id/okBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="확인"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        />
+    
+    <TextView
+        android:id="@+id/serialNumberLabel01"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/serialNumberLabel02"
+        android:text="※ NFC 칩을 이용할 수 없는 경우 아래의 빈 칸에"
+        android:textSize="12dp"
+        android:layout_alignParentRight="true"
+        />
+    
+   <TextView
+        android:id="@+id/serialNumberLabel02"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/okBtn"
+        android:layout_marginBottom="10dp"
+        android:text="자산번호를 입력하고 확인 버튼을 누르세요."
+        android:textSize="12dp"
+        android:layout_alignParentRight="true"
+        />
+    
+    
+
+</RelativeLayout>

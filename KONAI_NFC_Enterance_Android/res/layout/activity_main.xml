@@ -1,0 +1,114 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+	android:padding="10dp"
+    tools:context=".MainActivity"
+    >
+    
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:gravity="center_horizontal"
+        >
+        
+        <RelativeLayout
+            android:id="@+id/titleLabel1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+			android:layout_centerHorizontal="true"
+			>
+            
+        	<TextView 
+        		android:id="@+id/titleLabelSub1"
+        		android:layout_width="wrap_content"
+        		android:layout_height="wrap_content"
+        		android:text="KONA"
+        		android:textColor="#ffff0000"
+        		android:textStyle="bold"
+        		android:textSize="24dp"
+        		android:layout_alignParentTop="true"
+        		/>
+        
+        	<TextView 
+        		android:id="@+id/titleLabelSub2"
+        		android:layout_width="wrap_content"
+        		android:layout_height="wrap_content"
+        		android:layout_toRightOf="@+id/titleLabelSub1"
+        		android:text=" I"
+        		android:textColor="#ff95A4AB"
+        		android:textStyle="bold"
+        		android:textSize="24dp"
+        		android:layout_alignParentTop="true"
+        		/>   
+        </RelativeLayout>
+        
+        <TextView 
+        	android:id="@+id/titleLabel2"
+        	android:layout_width="wrap_content"
+        	android:layout_height="wrap_content"
+        	android:layout_below="@+id/titleLabel1"
+        	android:layout_centerHorizontal="true"
+        	android:text="물품 반출/입 프로그램"
+        	android:textStyle="bold"
+        	android:textSize="24dp"
+        	/>
+	</RelativeLayout>
+
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:padding="10dp"
+        >
+        
+   		<Button
+        	android:id="@+id/regBtn"
+        	android:layout_width="120dp"
+        	android:layout_height="wrap_content"
+        	android:layout_alignParentLeft="true"
+        	android:layout_marginLeft="16dp"
+        	android:text="등록"
+        	android:textSize="18dp"
+        	/>
+   		
+   		<Button
+        	android:id="@+id/lookupBtn"
+        	android:layout_width="120dp"
+        	android:layout_height="wrap_content"
+        	android:layout_alignParentRight="true"
+        	android:layout_marginRight="16dp"
+        	android:text="조회"
+        	android:textSize="18dp"
+        	/>
+    
+    	<Button
+       		android:id="@+id/exportBtn"
+        	android:layout_width="120dp"
+        	android:layout_height="wrap_content"
+        	android:layout_below="@+id/regBtn"
+        	android:layout_alignParentLeft="true"
+        	android:layout_marginLeft="16dp"
+        	android:layout_marginTop="16dp"
+        	android:text="반출"
+        	android:textSize="18dp"	
+        	/>
+    
+    	<Button
+        	android:id="@+id/importBtn"
+        	android:layout_width="120dp"
+        	android:layout_height="wrap_content"
+        	android:layout_below="@+id/lookupBtn"
+        	android:layout_alignParentRight="true"
+        	android:layout_marginRight="16dp"
+        	android:layout_marginTop="16dp"
+        	android:text="반입"
+        	android:textSize="18dp" 	
+        	/>
+    		
+    	</RelativeLayout>
+
+</RelativeLayout>

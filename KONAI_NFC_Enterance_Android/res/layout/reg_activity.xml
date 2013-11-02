@@ -1,0 +1,68 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+	android:padding="10dp"
+    tools:context=".MainActivity"
+    >
+    
+    <TextView 
+        android:id="@+id/regLabel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="물품 신규등록/수정/삭제"
+        android:textStyle="bold|italic"
+        android:textSize="20dp"
+        android:layout_alignParentTop="true"
+        android:gravity="right"        
+        />
+    
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_below="@+id/regLabel"
+        android:background="#ffff0000"
+        />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:padding="10dp"
+        >
+        
+   		<Button
+        	android:id="@+id/newRegBtn"
+        	android:layout_width="120dp"
+        	android:layout_height="wrap_content"
+        	android:layout_centerHorizontal="true"
+        	android:text="신규등록"
+        	android:textSize="18dp"
+        	/>
+   		
+   		<Button
+        	android:id="@+id/editBtn"
+        	android:layout_width="120dp"
+        	android:layout_height="wrap_content"
+        	android:layout_below="@+id/newRegBtn"
+        	android:layout_centerHorizontal="true"
+        	android:layout_marginTop="16dp"
+        	android:text="수정"
+        	android:textSize="18dp"
+        	/>
+    
+    	<Button
+       		android:id="@+id/deleteBtn"
+        	android:layout_width="120dp"
+        	android:layout_height="wrap_content"
+        	android:layout_below="@+id/editBtn"
+        	android:layout_centerHorizontal="true"
+        	android:layout_marginTop="16dp"
+        	android:text="삭제"
+        	android:textSize="18dp"	
+        	/>
+    
+    	</RelativeLayout>
+
+</RelativeLayout>
